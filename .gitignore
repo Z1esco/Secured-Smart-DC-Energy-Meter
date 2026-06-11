@@ -19,6 +19,10 @@ secrets.*
 *.local
 *.env
 
+# Large files
+*.pdf
+*.pptx
+
 # Logs and temp files
 *.log
 *.tmp
