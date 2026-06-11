@@ -1,0 +1,25 @@
+# VS Code
+.vscode/
+
+# Arduino / PlatformIO build outputs
+build/
+out/
+*.elf
+*.hex
+*.bin
+*.map
+*.o
+*.d
+
+# Local secrets and overrides
+secrets.*
+*.local.h
+*.local
+*.env
+
+# Logs and temp files
+*.log
+*.tmp
+*.bak
+Thumbs.db
+.DS_Store
