@@ -1,41 +1,74 @@
 # Secured Smart DC Energy Meter
 
-A secure IoT energy monitoring project built around an ESP32 edge node, MQTT over TLS, and oneM2M integration. The system measures voltage and current, displays live readings locally, and publishes telemetry to a backend platform for remote monitoring.
+<p align="center">
+	<img src="https://img.shields.io/badge/ESP32-IoT%20Edge%20Device-1f7a8c?style=for-the-badge" alt="ESP32 badge" />
+	<img src="https://img.shields.io/badge/MQTT-TLS%20Protected-0f766e?style=for-the-badge" alt="MQTT over TLS badge" />
+	<img src="https://img.shields.io/badge/oneM2M-Mobius%20Integration-334155?style=for-the-badge" alt="oneM2M badge" />
+</p>
 
-## Overview
+<p align="center">
+	A secure IoT energy monitoring project that measures DC voltage and current on an ESP32, displays live readings locally, and publishes telemetry to Blynk and a oneM2M/Mobius backend.
+</p>
 
-This repository contains the final project assets for a secured smart DC energy meter, including the Arduino sketch, proof-of-concept screenshots, and supporting documentation.
+## Project Snapshot
 
-The implementation focuses on:
+<table>
+	<tr>
+		<td><strong>Purpose</strong><br />Securely monitor DC energy usage and publish telemetry over encrypted channels.</td>
+		<td><strong>Core Flow</strong><br />Sense voltage/current → display locally → send to cloud/backend → review telemetry.</td>
+		<td><strong>Security Focus</strong><br />TLS transport, credential hygiene, and safer public sharing of project assets.</td>
+	</tr>
+</table>
 
-- Secure telemetry transport with MQTT over TLS.
-- ESP32-based data acquisition for voltage and current monitoring.
-- Local LCD feedback for on-device visibility.
-- Blynk dashboard integration for remote observability.
-- oneM2M/Mobius payload publishing for backend ingestion.
+## Highlights
+
+- ESP32-based sensing and telemetry.
+- Local 16x2 LCD feedback for live readings.
+- Blynk dashboard support for remote monitoring.
+- MQTT over TLS for protected data transport.
+- oneM2M/Mobius payload publishing for backend integration.
+- Supporting documentation for architecture, STRIDE analysis, hardware, and proof-of-concept evidence.
+
+## Technology Stack
+
+| Category | Technologies / Tools |
+| --- | --- |
+| Language | Arduino C++ for ESP32 firmware |
+| Embedded Platform | ESP32 development board |
+| Networking | Wi-Fi, MQTT, TLS/SSL |
+| IoT / Cloud | Blynk, oneM2M, Mobius |
+| UI / Display | 16x2 I2C LCD |
+| Libraries | `WiFi.h`, `WiFiClientSecure.h`, `BlynkSimpleEsp32.h`, `PubSubClient.h`, `Wire.h`, `LiquidCrystal_I2C.h` |
+| Development Tools | Arduino IDE or PlatformIO |
+| Analysis / Evidence | Packet capture, STRIDE model, architecture and hardware documentation |
+
+## Hardware Used
+
+- ESP32 development board.
+- Voltage sensing circuit.
+- Current sensing circuit.
+- 16x2 I2C LCD.
+- Wi-Fi network access.
+- Backend endpoint or MQTT broker with TLS support.
+
+## Software Used
+
+- Arduino IDE or PlatformIO.
+- Blynk platform for dashboard and virtual pin updates.
+- MQTT broker or Mobius endpoint.
+- TLS-enabled network stack on the ESP32.
+- Project documentation files for threat modeling, architecture, and hardware references.
 
 ## Repository Structure
 
-- [Code/](Code/) - ESP32 Arduino sketch and code-level notes.
-- [Proof Of Concepts/](Proof%20Of%20Concepts/) - Dashboard and protocol evidence screenshots.
-- [DFD.png](DFD.png) - Data flow diagram.
-- [System Architechture Mobius.png](System%20Architechture%20Mobius.png) - System architecture diagram.
-- [Hardware Components.pdf](Hardware%20Components.pdf) - Hardware reference material.
-- [STRIDE Analysis.pdf](STRIDE%20Analysis.pdf) - Threat modeling notes.
-
-## Project Status
-
-The repository is organized for public sharing. Sensitive lab artifacts are either excluded or documented separately so credentials and other private values are not exposed in version control.
-
-## Hardware and Software Requirements
-
-- ESP32 development board.
-- Current and voltage sensing circuitry.
-- 16x2 I2C LCD.
-- Wi-Fi access point.
-- Blynk project and auth token.
-- MQTT broker or Mobius endpoint with TLS enabled.
-- Arduino IDE or PlatformIO with ESP32 support.
+| Path | Description |
+| --- | --- |
+| [Code/](Code/) | ESP32 sketch and code-level notes. |
+| [Proof Of Concepts/](Proof%20Of%20Concepts/) | Dashboard and protocol evidence screenshots. |
+| [DFD.png](DFD.png) | Data flow diagram. |
+| [System Architechture Mobius.png](System%20Architechture%20Mobius.png) | System architecture diagram. |
+| [Hardware Components.pdf](Hardware%20Components.pdf) | Hardware reference material. |
+| [STRIDE Analysis.pdf](STRIDE%20Analysis.pdf) | Threat modeling notes. |
 
 ## Setup
 
