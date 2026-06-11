@@ -4,6 +4,8 @@
 # Arduino / PlatformIO build outputs
 build/
 out/
+*.pcap
+*.pcapng
 *.elf
 *.hex
 *.bin

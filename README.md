@@ -4,7 +4,7 @@ A secure IoT energy monitoring project built around an ESP32 edge node, MQTT ove
 
 ## Overview
 
-This repository contains the final project assets for a secured smart DC energy meter, including the Arduino sketch, proof-of-concept screenshots, network analysis material, and supporting documentation.
+This repository contains the final project assets for a secured smart DC energy meter, including the Arduino sketch, proof-of-concept screenshots, and supporting documentation.
 
 The implementation focuses on:
 
@@ -18,11 +18,14 @@ The implementation focuses on:
 
 - [Code/](Code/) - ESP32 Arduino sketch and code-level notes.
 - [Proof Of Concepts/](Proof%20Of%20Concepts/) - Dashboard and protocol evidence screenshots.
-- [Network Analysis.pcapng](Network%20Analysis.pcapng) - Packet capture for network inspection.
 - [DFD.png](DFD.png) - Data flow diagram.
 - [System Architechture Mobius.png](System%20Architechture%20Mobius.png) - System architecture diagram.
 - [Hardware Components.pdf](Hardware%20Components.pdf) - Hardware reference material.
 - [STRIDE Analysis.pdf](STRIDE%20Analysis.pdf) - Threat modeling notes.
+
+## Project Status
+
+The repository is organized for public sharing. Sensitive lab artifacts are either excluded or documented separately so credentials and other private values are not exposed in version control.
 
 ## Hardware and Software Requirements
 
@@ -46,7 +49,8 @@ The implementation focuses on:
 
 - Do not commit real credentials to the repository.
 - Prefer a certificate-pinned or CA-validated TLS configuration for production use.
-- Treat the packet capture and proof-of-concept screenshots as sensitive lab evidence.
+- Treat the proof-of-concept screenshots as sensitive lab evidence.
+- Avoid committing raw packet captures or credential-bearing exports to the public repository.
 
 ## Notes
 

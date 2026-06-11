@@ -19,3 +19,8 @@ Replace the following placeholders in the sketch before compiling or flashing:
 - The sketch currently uses `WiFiClientSecure::setInsecure()` for prototype testing.
 - Update the TLS configuration before using the firmware in a production environment.
 - Confirm the `mqttServer` IP address matches your deployment network.
+
+## Security Notes
+
+- Replace secrets with local-only values before building.
+- Treat the sketch as a public template, not a deployment-ready credential store.
